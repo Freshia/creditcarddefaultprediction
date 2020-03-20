@@ -28,7 +28,7 @@ x_test = train.iloc[:,1:6]
 y_test = train.iloc[:,6:7]
 print(y_train.head)
 
-clf = LogisticRegression()
+clf = LogisticRegression(C = 100)
 clf.fit(x_train, y_train.values.ravel())
 
 accuracy = clf.score(x_test, y_test)
